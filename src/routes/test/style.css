@@ -1,0 +1,29 @@
+body {
+	background-color: tomato;
+	font-family: sans-serif;
+	padding: 5em;
+  }
+  
+  h1, p {
+	text-align: center;
+  }
+  
+  .cta {
+	background-color: white;
+	border: 1px solid lightgrey;
+	border-radius: 6px;
+	color: tomato;
+	display: inline-block;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	font-weight: 700;
+	margin-bottom: 1em;
+	padding: 0.3em 1em;
+	text-decoration: none;
+  }
+  .cta:hover {
+	background-color: lightgray;
+	color: tomato;
+	text-decoration: none;
+
+  }

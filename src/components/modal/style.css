@@ -1,0 +1,104 @@
+
+  h1, p {
+	text-align: center;
+  }
+    
+  .modaloverlay {
+	background: rgba(0, 0, 0, 0.8);
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	display: block;
+	opacity: 1;
+	/* pointer-events: auto; */
+	z-index: 99999;
+  }
+
+  .modaloverlay .modal {
+	background-color: white;
+	height: 100%;
+	position: relative;
+	margin: 0 auto;
+	padding: 1rem 1rem 0rem 1rem;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+  }
+  @media (min-width: 60em) {
+	.modaloverlay .modal {
+	  height: 85%;
+	  margin: 5% auto;
+	  max-height: 57em;
+	  max-width: 66em;
+	  width: 85%;
+	}
+  }
+  .modaloverlay .modal > iframe, .modaloverlay .modal > div {
+	border: none;
+	width: 100%;
+	height: 100%;
+  }
+  .modaloverlay .close {
+	font-size: 50px;
+	padding: 8px 12px;
+	right: 0;
+	text-align: center;
+	text-decoration: none;
+	margin-right: 2pc;
+	top: 0;
+	z-index: 1;
+	position: sticky;
+	margin-left: 90%;
+	border-radius: 1rem;
+	background-color: lightcoral;
+	color: white;
+  }
+  
+  ::-webkit-scrollbar {
+	width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555;
+  }
+  
+  .pycode {
+	width: 90%;
+	margin-left: 5%;
+  }
+  
+  @media (min-width: 60em) {
+	.pycode {
+  
+	  width: 70%;
+	  margin-left: 15%;
+	}
+  }
+  
+button {
+	border: 0rem;
+}
+
+.close:hover{
+	background-color: #555;
+}
+
+  /*# sourceMappingURL=styles.css.map */
+  
