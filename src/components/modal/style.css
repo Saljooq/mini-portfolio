@@ -35,6 +35,7 @@
 	  max-height: 57em;
 	  max-width: 66em;
 	  width: 85%;
+	  border-radius: 1rem;
 	}
   }
   .modaloverlay .modal > iframe, .modaloverlay .modal > div {
