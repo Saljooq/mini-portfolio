@@ -1,6 +1,6 @@
 import { h } from 'preact';
 import { route } from 'preact-router';
-import { useState } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 import Modal from '../../components/modal';
 import style from './style.css';
 
@@ -15,8 +15,15 @@ const Test = (prop: Props) => {
 	
 	const [isVisible, setVisible] = useState(prop.showModal)
 
+
+	useEffect(() => {
+		// Update the visible as the url get's update during history navigation 
+		setVisible(prop.showModal);
+	  }, [prop.showModal]);
+
+
 	const openModal = () => {
-		route("/test/show", true);
+		route("/test/show");
 		setVisible(true);
 	}
 
@@ -42,7 +49,7 @@ const Test = (prop: Props) => {
 		<p><a href="https://tools.pingdom.com/">Here</a> is the link to do the test</p>
 
 		<Modal isVisible={isVisible} closeModel={() => {
-			route("/test", true);
+			route("/test");
 			return setVisible(false);
 		}} />
 
