@@ -1,10 +1,11 @@
-body {
+.maintest {
+	height: 100%;
 	background-color: tomato;
 	font-family: sans-serif;
 	padding: 5em;
   }
   
-  h1, p {
+  h1, h2, p {
 	text-align: center;
   }
   
