@@ -1,4 +1,4 @@
-import { h } from 'preact';
+import { Fragment, h } from 'preact';
 import { route } from 'preact-router';
 import { useEffect, useState } from 'preact/hooks';
 import Modal from '../../components/modal';
@@ -27,6 +27,11 @@ const Test = (prop: Props) => {
 		setVisible(true);
 	}
 
+
+	const range = (start:number, end: number)  => Array.from({length: (end - start)}, (v, k) => k + start);
+
+	const arr = range(0, 12);
+
 	
 	return (
 	<div class={style.maintest}>
@@ -48,10 +53,22 @@ const Test = (prop: Props) => {
 		<h2>GOAL: always keep packet size small. Preferably &lt; 50 KB (minus the image size obviously)</h2>
 		<p><a href="https://tools.pingdom.com/">Here</a> is the link to do the test</p>
 
-		<Modal isVisible={isVisible} closeModel={() => {
+		<Modal isVisible={isVisible} closeModal={() => {
 			route("/test");
 			return setVisible(false);
-		}} />
+		}} >
+			<div>
+				{arr.map( (i) => (
+					<Fragment key={i}>
+						<h1>Here is some content inside the Modal.</h1>
+						<p>If the modal shrinks below the breakpoint then the modal goes full screen for mobile use.</p>
+					</Fragment>
+				))}
+				<br />
+				<p>The end</p>
+				<br />
+			</div>
+		</Modal>
 
 	</div>
 )};

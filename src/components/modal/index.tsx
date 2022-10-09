@@ -4,10 +4,11 @@ import style from './style.css';
 
 interface IProp{
 	isVisible: boolean;
-    closeModel: ()=> void;
+    closeModal: ()=> void;
+    children: any;
 }
 
-const Modal = (prop: IProp) => { 
+const Modal = (props: IProp) => { 
 
     useEffect(() => {
         document.addEventListener('click', handleClick, true)
@@ -22,55 +23,19 @@ const Modal = (prop: IProp) => {
     const handleClick = (e: MouseEvent) => {
 
         if (refOne && refOne.current && !refOne.current.contains(e.target as Node)){
-            prop.closeModel();
+            props.closeModal();
         }
     }
 
 	
-	if (prop.isVisible)
+	if (props.isVisible)
     {
         return (
             <div>
                 <div id="google" class={style.modaloverlay}>
                     <div class={style.modal}  ref={refOne} >
-                        <button onClick={prop.closeModel} class={style.close}>&times;</button>
-                        <div>
-                            <h1>Here is some content inside the Modal.</h1>
-                            <p>If the modal shrinks below the breakpoint then the modal goes full screen for mobile use.</p>
-                            <h1>Here is some content inside the Modal.</h1>
-                            <p>If the modal shrinks below the breakpoint then the modal goes full screen for mobile use.</p>
-                            <h1>Here is some content inside the Modal.</h1>
-                            <p>If the modal shrinks below the breakpoint then the modal goes full screen for mobile use.</p>
-                            <h1>Here is some content inside the Modal.</h1>
-                            <p>If the modal shrinks below the breakpoint then the modal goes full screen for mobile use.</p>
-                            <h1>Here is some content inside the Modal.</h1>
-                            <p>If the modal shrinks below the breakpoint then the modal goes full screen for mobile use.</p>
-                            <h1>Here is some content inside the Modal.</h1>
-                            <p>If the modal shrinks below the breakpoint then the modal goes full screen for mobile use.</p>
-                            <h1>Here is some content inside the Modal.</h1>
-                            <p>If the modal shrinks below the breakpoint then the modal goes full screen for mobile use.</p>
-                            <h1>Here is some content inside the Modal.</h1>
-                            <p>If the modal shrinks below the breakpoint then the modal goes full screen for mobile use.</p>
-                            <h1>Here is some content inside the Modal.</h1>
-                            <p>If the modal shrinks below the breakpoint then the modal goes full screen for mobile use.</p>
-                            <h1>Here is some content inside the Modal.</h1>
-                            <p>If the modal shrinks below the breakpoint then the modal goes full screen for mobile use.</p>
-                            <h1>Here is some content inside the Modal.</h1>
-                            <p>If the modal shrinks below the breakpoint then the modal goes full screen for mobile use.</p>
-                            <h1>Here is some content inside the Modal.</h1>
-                            <p>If the modal shrinks below the breakpoint then the modal goes full screen for mobile use.</p>
-                            <h1>Here is some content inside the Modal.</h1>
-                            <p>If the modal shrinks below the breakpoint then the modal goes full screen for mobile use.</p>
-                            <h1>Here is some content inside the Modal.</h1>
-                            <p>If the modal shrinks below the breakpoint then the modal goes full screen for mobile use.</p>
-                            <h1>Here is some content inside the Modal.</h1>
-                            <p>If the modal shrinks below the breakpoint then the modal goes full screen for mobile use.</p>
-                            <h1>Here is some content inside the Modal.</h1>
-                            <p>If the modal shrinks below the breakpoint then the modal goes full screen for mobile use.</p>
-                            <br />
-                            <p>hello</p>
-                            <br />
-                        </div>
+                        <button onClick={props.closeModal} class={style.close}>&times;</button>
+                        {props.children}
                     </div>
                 </div>
             </div>
