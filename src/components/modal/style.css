@@ -60,8 +60,13 @@
   }
   
   ::-webkit-scrollbar {
-	width: 20px;
+	width: 8px;
   }
+  @media (min-width: 60em) {
+	::-webkit-scrollbar {
+		width: 20px;
+	}
+}
   
   /* Track */
   ::-webkit-scrollbar-track {
