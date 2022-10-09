@@ -3,6 +3,7 @@ import { route } from 'preact-router';
 import { useEffect, useState } from 'preact/hooks';
 import Modal from '../../components/modal';
 import style from './style.css';
+import ReactMarkdown from 'react-markdown'
 
 
 
@@ -66,6 +67,10 @@ const Test = (prop: Props) => {
 				))}
 				<br />
 				<p>The end</p>
+
+				<ReactMarkdown>
+					# Hello, *world*!
+				</ReactMarkdown>
 				<br />
 			</div>
 		</Modal>

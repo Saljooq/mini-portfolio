@@ -3,3 +3,21 @@
 	min-height: 100%;
 	width: 100%;
 }
+
+
+.reactMarkDown {
+	border: 1px;
+  }
+  
+.reactMarkDown tbody {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	list-style: disc outside none;
+	text-align:center;
+}
+
+.reactMarkDown thead {
+	margin-left: 2em;
+	display: list-item;
+	text-align: center;
+}

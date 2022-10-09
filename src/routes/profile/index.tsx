@@ -1,6 +1,8 @@
 import { h } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
 import style from './style.css';
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 interface Props {
     user: string;
@@ -16,6 +18,27 @@ const Profile = ({ user }: Props) => {
 		return () => clearInterval(timer);
 	}, []);
 
+	const merm_graph = `| Feature    | Support              |
+| ---------: | :------------------- |
+| CommonMark | 100%                 |
+| GFM        | 100% w/ \`remark-gfm\` |
+
+~~strikethrough~~
+
+[ ] task list\n
+[x] checked item
+
+
+\`\`\`mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+\`\`\`
+	
+	`
+
     return (
 		<div class={style.profile}>
 			<h1>Profile: {user}</h1>
@@ -28,6 +51,15 @@ const Profile = ({ user }: Props) => {
 				{' '}
 				Clicked {count} times.
 			</p>
+
+			<ReactMarkdown>
+					# Hello, *world*!
+			</ReactMarkdown >
+			<ReactMarkdown 
+				children={merm_graph} 
+				remarkPlugins={[remarkGfm]}
+				className={style.reactMarkdown}
+			/>
 		</div>
 	);
 };
