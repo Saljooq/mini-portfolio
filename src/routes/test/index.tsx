@@ -3,7 +3,7 @@ import { route } from 'preact-router';
 import { useEffect, useState } from 'preact/hooks';
 import Modal from '../../components/modal';
 import style from './style.css';
-
+import Pycode from '../../components/pycode'
 
 
 interface Props {
@@ -30,7 +30,14 @@ const Test = (prop: Props) => {
 
 	const range = (start:number, end: number)  => Array.from({length: (end - start)}, (v, k) => k + start);
 
-	const arr = range(0, 12);
+	const arr = range(0, 1);
+
+	const codeString = `def openFile(path):
+	file = open(path, "r")
+	content = file.read()
+	file.close()
+	return content`
+
 
 	
 	return (
@@ -65,6 +72,9 @@ const Test = (prop: Props) => {
 					</Fragment>
 				))}
 				<br />
+				<Pycode>
+					{codeString}
+				</Pycode>
 				<p>The end</p>
 				<br />
 			</div>

@@ -85,19 +85,6 @@
 	background: #555;
   }
   
-  .pycode {
-	width: 90%;
-	margin-left: 5%;
-  }
-  
-  @media (min-width: 60em) {
-	.pycode {
-  
-	  width: 70%;
-	  margin-left: 15%;
-	}
-  }
-  
 button {
 	border: 0rem;
 }
