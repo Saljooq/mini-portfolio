@@ -6,6 +6,7 @@ import Header from './header';
 import Home from '../routes/home';
 import Profile from '../routes/profile';
 import Test from '../routes/test';
+import MD from '../routes/md';
 
 const App = () => (
 	<div id="app">
@@ -16,6 +17,7 @@ const App = () => (
             <Route path="/test/show" component={Test} showModal={true} />
             <Route path="/profile/" component={Profile} user="me" />
             <Route path="/profile/:user" component={Profile} />
+            <Route path="/md" component={MD} />
         </Router>
     </div>
 );

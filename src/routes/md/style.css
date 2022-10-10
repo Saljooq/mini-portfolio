@@ -1,0 +1,23 @@
+.profile {
+	padding: 56px 20px;
+	min-height: 100%;
+	width: 100%;
+}
+
+
+.profile table, th, td {
+	border: 1px solid;
+	border-collapse: collapse;
+	padding: 0.5rem
+  }
+
+.profile th {
+	background-color: lightblue;
+}
+
+
+.profile pre{
+	padding: 1rem;
+	border: 3px solid #C0C0FF;
+	border-radius: 5px;
+}

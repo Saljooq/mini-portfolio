@@ -10,6 +10,7 @@ const Header = () => (
 			<Link activeClassName={style.active} href="/test">Test</Link>
 			<Link activeClassName={style.active} href="/profile">Me</Link>
 			<Link activeClassName={style.active} href="/profile/john">John</Link>
+			<Link activeClassName={style.active} href="/md">MD</Link>
 		</nav>
 	</header>
 );
