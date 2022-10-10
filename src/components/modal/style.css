@@ -45,15 +45,13 @@
   }
   .modaloverlay .close {
 	font-size: 50px;
-	padding: 8px 12px;
 	right: 0;
 	text-align: center;
 	text-decoration: none;
-	margin-right: 2pc;
 	top: 0;
 	z-index: 1;
 	position: sticky;
-	margin-left: 90%;
+	margin-left: calc(100% - 50px);
 	border-radius: 1rem;
 	background-color: lightcoral;
 	color: white;
