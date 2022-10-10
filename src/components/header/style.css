@@ -1,9 +1,8 @@
-.header {
+.navbar {
 	position: fixed;
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 56px;
 	padding: 0;
 	background: #673AB7;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -20,10 +19,7 @@
 	color: #FFF;
 }
 
-.header nav {
-	float: right;
-	font-size: 100%;
-}
+
 
 .header nav a {
 	display: inline-block;
@@ -45,4 +41,63 @@
 
 .header nav a.active {
 	background: rgba(0,0,0,0.4);
+}
+
+.header nav .logo {
+	display: none;
+}
+
+.header .navbar {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 4;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.header .navbar .logo {
+	position: absolute;
+	left: 0;
+}
+
+.header .navbar .links {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 4;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+
+}
+
+
+@media (min-width: 50em) {
+	.header .navbar .logo {
+		display: block;
+	}
+	
+	.header .navbar img {
+		max-width: 56px;
+	}
+
+
+	.header .navbar {
+		display: flex;
+		flex-direction: row;
+		flex-grow: 4;
+		justify-content: space-between;
+	}
+
+	.header .navbar .logo {
+		position: absolute;
+		left: 0;
+	}
+
+	.header .navbar .links {
+		display: flex;
+		flex-direction: row;
+		flex-grow: 4;
+		justify-content: flex-end;
+	}
 }
