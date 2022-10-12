@@ -53,7 +53,7 @@ const Test = (prop: Props) => {
 		<h2>GOAL: always keep packet size small. Preferably &lt; 50 KB (minus the image size obviously)</h2>
 		<p><a href="https://tools.pingdom.com/">Here</a> is the link to do the test</p>
 
-		<Modal isVisible={isVisible} closeModal={() => {
+		{isVisible && <Modal isVisible={isVisible} closeModal={() => {
 			route("/test");
 			return setVisible(false);
 		}} >
@@ -68,7 +68,7 @@ const Test = (prop: Props) => {
 				<p>The end</p>
 				<br />
 			</div>
-		</Modal>
+		</Modal>}
 
 	</div>
 )};
