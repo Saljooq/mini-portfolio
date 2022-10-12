@@ -54,6 +54,10 @@
 
 }
 
+.header .navbar .links .active{
+	background:rgba(0,0,0,0.2);
+}
+
 .header .navbar .links a:hover{
 	background:rgba(0,0,0,0.2);
 }
